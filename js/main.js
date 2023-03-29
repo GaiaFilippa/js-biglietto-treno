@@ -39,13 +39,11 @@ let priceWith40PercentsDiscount = ticketPrice / 100 * 60;
 //Risultato costo finale
 if (age < 18) {
     console.log(priceWith20PercentsDiscount);
-    document.getElementById("tot-ticket-price").innerHTML = priceWith20PercentsDiscount.toFixed(2); 
+    document.getElementById("tot-ticket-price").innerHTML = priceWith20PercentsDiscount.toFixed(2)+"&euro;"; 
 } else if (age > 65) {
     console.log(priceWith40PercentsDiscount);
-    document.getElementById("tot-ticket-price").innerHTML = priceWith40PercentsDiscount.toFixed(2); 
+    document.getElementById("tot-ticket-price").innerHTML = priceWith40PercentsDiscount.toFixed(2)+"&euro;"; 
 } else {
     console.log(ticketPrice);
-    document.getElementById("tot-ticket-price").innerHTML = ticketPrice.toFixed(2); 
+    document.getElementById("tot-ticket-price").innerHTML = ticketPrice.toFixed(2)+"&euro;"; 
 }
-
-// Visualizza sulla pagina

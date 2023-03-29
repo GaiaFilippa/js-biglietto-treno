@@ -7,4 +7,17 @@ Secondo queste regole:
 - va applicato uno sconto del 40% per gli over 65.
 */
 
-let routeKm = prompt("Inserisci il numero di chilometri del tuo percorso");
+//Acquisizione dell'imput
+let routeKm = prompt("Inserisci il numero di chilometri del tuo percorso: ");
+let age = prompt("Inserisci l'età del passeggero: ")
+
+// Validazione dell'imput
+let isRouteKmANumber = !isNaN(routeKm);
+let isAgeANumber = !isNaN(age);
+
+if (isRouteKmANumber && isAgeANumber) {
+    routeKm = parseInt(routeKm);
+    age = parseInt(age);
+} else {
+    console.log("Gli input inseriti non sono validi, riesegui il programma!");
+}

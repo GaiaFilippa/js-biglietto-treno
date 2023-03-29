@@ -32,22 +32,18 @@ console.log(ticketPrice);
 
 // Calcolo costo percorso con 20% di sconto minorenni
 let priceWith20PercentsDiscount = ticketPrice / 100 * 80;
-console.log(priceWith20PercentsDiscount)
 
 // Calcolo costo percorso con 40% di sconto over 65
 let priceWith40PercentsDiscount = ticketPrice / 100 * 60;
-console.log(priceWith40PercentsDiscount)
 
 //Risultato costo
 if (age < 18) {
     console.log(priceWith20PercentsDiscount);
-} else {
-    console.log(ticketPrice);
-}
-
-if (age > 65) {
+} else if (age > 65) {
     console.log(priceWith40PercentsDiscount);
 } else {
     console.log(ticketPrice);
 }
 
+// Visualizza sulla pagina
+document.getElementById("tot-ticket-price").innerHTML = ticketPrice.toFixed(2); 

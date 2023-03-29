@@ -9,9 +9,12 @@ Secondo queste regole:
 
 //Acquisizione dell'imput
 let routeKm = prompt("Inserisci il numero di chilometri del tuo percorso: ");
-let age = prompt("Inserisci l'età del passeggero: ")
+let age = prompt("Inserisci l'età del passeggero: ");
+
+let ratePerKm = (0,21);
 
 // Validazione dell'imput
+// Inserisci numeri con la virgola!!
 let isRouteKmANumber = !isNaN(routeKm);
 let isAgeANumber = !isNaN(age);
 
@@ -21,3 +24,7 @@ if (isRouteKmANumber && isAgeANumber) {
 } else {
     console.log("Gli input inseriti non sono validi, riesegui il programma!");
 }
+
+// Calcolo costo percorso
+let multOfNumbers = routeKm * ratePerKm;
+console.log(multOfNumbers);
